@@ -1,0 +1,15 @@
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/MazeEscape.GeneratedMSBuildEditorConfig.editorconfig
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/MazeEscape.AssemblyInfoInputs.cache
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/MazeEscape.AssemblyInfo.cs
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/MazeEscape.csproj.CoreCompileInputs.cache
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/MazeEscape.sourcelink.json
+/home/uthmancan/MazeEscape/MazeEscape/bin/Debug/net8.0/MazeEscape
+/home/uthmancan/MazeEscape/MazeEscape/bin/Debug/net8.0/MazeEscape.deps.json
+/home/uthmancan/MazeEscape/MazeEscape/bin/Debug/net8.0/MazeEscape.runtimeconfig.json
+/home/uthmancan/MazeEscape/MazeEscape/bin/Debug/net8.0/MazeEscape.dll
+/home/uthmancan/MazeEscape/MazeEscape/bin/Debug/net8.0/MazeEscape.pdb
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/MazeEscape.dll
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/refint/MazeEscape.dll
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/MazeEscape.pdb
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/MazeEscape.genruntimeconfig.cache
+/home/uthmancan/MazeEscape/MazeEscape/obj/Debug/net8.0/ref/MazeEscape.dll
