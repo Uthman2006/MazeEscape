@@ -11,7 +11,7 @@ namespace MazeEscape.Game
         {
             string[] lines = File.ReadAllLines(path);
             if (lines.Length == 0)
-                throw new InvalidDataException("Maze fiel is empty");
+                throw new InvalidDataException("Maze field is empty");
             int width = lines[0].Length;
             int height = lines.Length;
             if (lines.Any(line => line.Length != width))

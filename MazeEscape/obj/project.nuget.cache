@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wSog6LrujcZ5IYCEwfjVJDRwHm2X8tyxkMm3yjdBducUJ5ToShgvqWJyb1/xhFdyJbKQFycHrgFyQM532b4ivA==",
+  "dgSpecHash": "0zA2oFi1Eo2cV9SFqLF2PmUP+By9pKy5mmX04WkaDxaSODSnXKTYQqgViDF+SiBT03cB4xpJjkE9wSeg29sy/A==",
   "success": true,
-  "projectFilePath": "/home/uthmancan/MazeEscape/MazeEscape.csproj",
+  "projectFilePath": "/home/uthmancan/MazeEscape/MazeEscape/MazeEscape.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

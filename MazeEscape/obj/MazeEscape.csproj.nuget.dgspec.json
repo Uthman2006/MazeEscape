@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/uthmancan/MazeEscape/MazeEscape.csproj": {}
+    "/home/uthmancan/MazeEscape/MazeEscape/MazeEscape.csproj": {}
   },
   "projects": {
-    "/home/uthmancan/MazeEscape/MazeEscape.csproj": {
+    "/home/uthmancan/MazeEscape/MazeEscape/MazeEscape.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/uthmancan/MazeEscape/MazeEscape.csproj",
+        "projectUniqueName": "/home/uthmancan/MazeEscape/MazeEscape/MazeEscape.csproj",
         "projectName": "MazeEscape",
-        "projectPath": "/home/uthmancan/MazeEscape/MazeEscape.csproj",
+        "projectPath": "/home/uthmancan/MazeEscape/MazeEscape/MazeEscape.csproj",
         "packagesPath": "/home/uthmancan/.nuget/packages/",
-        "outputPath": "/home/uthmancan/MazeEscape/obj/",
+        "outputPath": "/home/uthmancan/MazeEscape/MazeEscape/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/uthmancan/.nuget/NuGet/NuGet.Config"
