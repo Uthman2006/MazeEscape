@@ -1,7 +1,6 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Resources;
 using System.Threading;
 using MazeEscape.Entities;
 using MazeEscape.Game;
