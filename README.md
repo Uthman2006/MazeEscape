@@ -22,19 +22,19 @@ When you first run the game it leads you to the Menu where you should choose a m
             <td>Restarts the game</td>
         </tr>
         <tr>
-            <td>^ (Arrow Up)</td>
+            <td>^ (Arrow Up) or W</td>
             <td>Moves up (along the y-axis to the positive side)</td>
         </tr>
         <tr>
-            <td> v (Arrow Down) </td>
+            <td> v (Arrow Down) or S</td>
             <td> Moves down (along the y-axis to the negative side)</td>
         </tr>
         <tr>
-            <td>< (Arrow Left)</td>
+            <td>< (Arrow Left) or A</td>
             <td>Moves left (along the x-axis to the negative side)</td>
         </tr>
         <tr>
-            <td>> (Arrow Right)</td>
+            <td>> (Arrow Right) or D</td>
             <td>Moves right (along the x-axis to the positive side)</td>
         </tr>
     </tbody>

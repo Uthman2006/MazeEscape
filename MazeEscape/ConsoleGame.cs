@@ -1,6 +1,5 @@
 using System;
 using System.Diagnostics;
-using System.IO;
 using System.Threading;
 using MazeEscape.Entities;
 using MazeEscape.Game;
@@ -39,7 +38,7 @@ namespace MazeEscape
                 else
                 {
                     aiTurnHandler();
-                    Thread.Sleep(1000);
+                    Thread.Sleep(Constants.AIMoveDelay);
                 }
                 playerTurn = !playerTurn;
                 turnCount++;
@@ -79,7 +78,7 @@ namespace MazeEscape
         {
             try
             {
-                string mazePath = Path.Combine($"Mazes/{mazeFile}");
+                string mazePath = $"Mazes/{mazeFile}";
                 (char[,] maze, Position? playerStart, Position? aiStart, Position? exit) = MazeLoader.loadMaze(mazePath);
                 if (playerStart == null || aiStart == null || exit == null) throw new Exception("No sufficient data");
                 gameState = new(maze, playerStart, aiStart, exit);
@@ -147,15 +146,19 @@ namespace MazeEscape
                 switch (key)
                 {
                     case ConsoleKey.UpArrow:
+                    case ConsoleKey.W:
                         validMove = gameState.tryMovePlayer(0, -1);
                         break;
                     case ConsoleKey.DownArrow:
+                    case ConsoleKey.S:
                         validMove = gameState.tryMovePlayer(0, 1);
                         break;
                     case ConsoleKey.LeftArrow:
+                    case ConsoleKey.A:
                         validMove = gameState.tryMovePlayer(-1, 0);
                         break;
                     case ConsoleKey.RightArrow:
+                    case ConsoleKey.D:
                         validMove = gameState.tryMovePlayer(1, 0);
                         break;
                     case ConsoleKey.R:
