@@ -36,4 +36,14 @@ Every code in here is in the package `MazeEscape`
 #### `public class ConsoleGame() { ... }`:
 **Description**: This class is the main part of this game. Everything function is called in order so that the game run flawlessly.<br>
 **Fields**: `private GameState gameState`, `private int turnCount = 0`, `private bool playerTurn = true`, `string maze`<br>
-**Methds**:<br>
+**Methods**:<br>
+`public void run()` - this method executes the whole game. This method is the main method of this class.<br>
+`private void chooseMaze()` - this method is used for printing existing mazes and ask the player to choose one from the list and save it to the `string maze` variable.<br>
+`private void loadGame(string mazeFile)` - this method is used for loading the maze, player start position, ai start position, and exit position. this method takes the data and parses it.<br>
+`private void resetGame()` - this method resets the game to its intial state which is the starting point of the maze.<br>
+`private void render()` - this method is ued for printing the maze to the console.<br>
+`private void renderGameOver` - this method outputs the result after the game has ended.<br>
+`private void playerTurnHandler` - this method is used for handle the player's turn. This method takes players input via `Syste.ConsoleKey` and checks if the move is valid. if it is valid, it performs the move. if not, then it will show an error.<br>
+`private void aiTurnHandler()` - this metjod is used for handiling th emovements of AI. It simply calls `GameState.moveAI(Position nextPosition)`.<br>
+`private bool restartHandler()` - this method is used for check ing if the user pressed `R` button. If yes, then it will return true. If no it will return false.
+### In order to run this code, create new instance of the class, and call `public void run()`
