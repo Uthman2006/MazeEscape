@@ -7,7 +7,7 @@ namespace MazeEscape.Game
 {
     public static class MazeLoader
     {
-        public static (char[,] maze, Position? playerStart, Position? aiStart, Position? exit) loadMaze(string path)
+        public static (char[,] maze, Position? playerStart, Position? aiStart, Position? exit) loadMaze(string path) // loads the maze from the given path and parses it
         {
             string[] lines = File.ReadAllLines(path);
             if (lines.Length == 0)

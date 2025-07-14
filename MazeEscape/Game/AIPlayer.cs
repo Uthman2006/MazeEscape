@@ -6,20 +6,20 @@ namespace MazeEscape.Game
 {
     public static class AIPlayer
     {
-        public static Position calculateNextMove(GameState gameState)
+        public static Position calculateNextMove(GameState gameState) // finds next position and saves it in the list.
         {
             List<Position>? path = findShortestPath(gameState.maze, gameState.aiPosition, gameState.exitPosition);
             return (path?.Count > 1) ? path[1] : gameState.aiPosition;
         }
-        private static List<Position>? findShortestPath(char[,] maze, Position start, Position end)
+        private static List<Position>? findShortestPath(char[,] maze, Position start, Position end) // BFS algorithm for shortest path for AI
         {
             int width = maze.GetLength(1);
             int height = maze.GetLength(0);
-            Queue<List<Position>> q = new();
-            HashSet<Position> visited = new();
+            Queue<List<Position>> q = new(); // BFS queue needed for processing vertices
+            HashSet<Position> visited = new(); // BFS coloring needed for checking if the certain vertex is processed
             q.Enqueue(new List<Position> { start });
             visited.Add(start);
-            while (q.Count > 0)
+            while (q.Count > 0) // Main loop of BFS
             {
                 List<Position> path = q.Dequeue();
                 Position current = path[path.Count - 1];
@@ -42,7 +42,7 @@ namespace MazeEscape.Game
             }
             return null;
         }
-        private static bool isValidPosition(char[,] maze, Position pos) {
+        private static bool isValidPosition(char[,] maze, Position pos) { // checks if the given position is in the maze and not on the wall.
             return pos.x >= 0 && pos.y >= 0 && pos.y < maze.GetLength(0) && pos.x < maze.GetLength(1) && maze[pos.y, pos.x] != Constants.Wall;
         }
     }

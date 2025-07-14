@@ -17,7 +17,7 @@ namespace MazeEscape.Game
             this.aiPosition = aiStart;
             this.exitPosition = exit;
         }
-        public bool tryMovePlayer(int dx, int dy)
+        public bool tryMovePlayer(int dx, int dy) // tries to move player if the given position is not valid returns false
         {
             if (gameOver)
                 return false;
@@ -31,7 +31,7 @@ namespace MazeEscape.Game
             }
             return false;
         }
-        public bool isValidMove(int x, int y)
+        public bool isValidMove(int x, int y)// checks if the given position is in the maze and not on the wall
         {
             if (x < 0 || y < 0 || x >= getWidth() || y >= getHeight())
                 return false;
@@ -39,7 +39,7 @@ namespace MazeEscape.Game
                 return false;
             return true;
         }
-        public void checkWin(string entity)
+        public void checkWin(string entity) // determines the winner of the game
         {
             Position currentPosition = (entity == "player") ? playerPosition : aiPosition;
             if (currentPosition.Equals(exitPosition))
@@ -48,7 +48,7 @@ namespace MazeEscape.Game
                 winner = entity;
             }
         }
-        public void moveAI(Position newPosition)
+        public void moveAI(Position newPosition) // moves AI and checks if the winner is AI
         {
             if (gameOver)
                 return;

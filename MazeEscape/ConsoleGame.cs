@@ -13,7 +13,7 @@ namespace MazeEscape
         private int turnCount = 0;
         private bool playerTurn = true;
         string maze;
-        public void run()
+        public void run() // main method for this game. Calls every method required
         {
             Console.Title = "Maze Escape - PLayer vs AI";
             chooseMaze();
@@ -44,7 +44,7 @@ namespace MazeEscape
                 turnCount++;
             }
         }
-        private void chooseMaze()
+        private void chooseMaze() // maze choosing section of the game. If you want new maze, you can save it in the Mazes folder as .txt file.
         {
             Console.CursorVisible = true;
             Process process = new();
@@ -74,7 +74,7 @@ namespace MazeEscape
             maze = mazes[mazeNum - 1];
             Console.CursorVisible = false;
         }
-        private void loadGame(string mazeFile)
+        private void loadGame(string mazeFile) // calls the loadMaze method in MazeLoader and passes the returned data to GameState
         {
             try
             {
@@ -89,13 +89,13 @@ namespace MazeEscape
                 Environment.Exit(1);
             }
         }
-        private void resetGame()
+        private void resetGame() // resets the game to its initial condition
         {
             loadGame($"{maze}");
             playerTurn = true;
             turnCount = 0;
         }
-        private void render()
+        private void render() // prints the maze and the positions of the players
         {
             Console.Clear();
             Console.WriteLine($"Turn No {turnCount} - {((playerTurn) ? "Player\'s Turn" : "AI\'s Turn")}");
@@ -129,14 +129,14 @@ namespace MazeEscape
             Console.WriteLine("Controls: Arrow keys to Move, R to Restart, Q to Quit");
             Console.WriteLine();
         }
-        private void renderGameOver()
+        private void renderGameOver() // prints the game over section of the game
         {
             Console.WriteLine();
             Console.WriteLine($"==== {((gameState.winner == null) ? "TIE" : $"{gameState.winner.ToUpper()} WINS!")} ====");
             Console.WriteLine($"Game over in {turnCount} turns");
             Console.WriteLine("Press R to restart or Q to quit");
         }
-        private void playerTurnHandler()
+        private void playerTurnHandler() // handles the keys and the turns of the player.
         {
             Console.WriteLine($"Turn {turnCount + 1}: Your move (use arrow keys)");
             bool validMove = false;
@@ -174,13 +174,13 @@ namespace MazeEscape
                 }
             }
         }
-        private void aiTurnHandler()
+        private void aiTurnHandler() // handles the moves of the AI
         {
             Console.WriteLine($"Turn {turnCount + 1} : AI is moving...");
             Position nextPosition = AIPlayer.calculateNextMove(gameState);
             gameState.moveAI(nextPosition);
         }
-        private bool restartHandler()
+        private bool restartHandler() // handles the restart section and the restart key of the game
         {
             while (true)
             {
